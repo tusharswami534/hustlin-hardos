@@ -30,8 +30,416 @@
     <meta property="twitter:image" content="/meta-image.png" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-red: #ff0000;
+        --color-yellow: #ffd600;
+        --color-orange: #ff1300;
+        --color-brown: #70675f;
+        --color-green: #00a106;
+        --color-gray: #a59a90;
+      }
+      @theme {
+        --text-large: 157px;
+        --text-medium: 140px;
+        --text-small: 80px;
+      }
+      /* Line Hight */
+      @theme {
+        --spacing-100: 100%;
+        --spacing-104: 104%;
+        --spacing-111: 111%;
+        --spacing-140: 140%;
+        --spacing-150: 150%;
+      }
+    </style>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline t">Hello world!</h1>
+    <!-- Header -->
+    <header class="py-2">
+      <div class="container max-xl:px-4 max-w-[1140px] w-full mx-auto">
+        <div class="flex w-full justify-end items-center">
+          <div class="max-w-[658px] w-full">
+            <div class="w-full flex items-center justify-between">
+              <a href="/">Hustlin' Hardos</a>
+              <div
+                id="menu"
+                class="flex gap-5 transition-all max-sm:z-40 duration-300 items-center max-sm:gap-4 max-sm:fixed max-sm:flex-col max-sm:w-full max-sm:h-full max-sm:justify-center max-sm:items-center max-sm:bg-white max-sm:top-0 max-sm:left-full"
+              >
+                <div
+                  class="flex gap-[18px] max-sm:flex-col max-sm:gap-4 items-center"
+                >
+                  <a
+                    href="/"
+                    class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center"
+                  >
+                    <img src="./assets/images/svg/Discord.svg" alt="discord" />
+                  </a>
+                  <a
+                    href="/"
+                    class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center"
+                  >
+                    <img src="./assets/images/svg/Twitter.svg" alt="discord" />
+                  </a>
+                  <a
+                    href="/"
+                    class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center"
+                  >
+                    <img
+                      src="./assets/images/svg/Instagram.svg"
+                      alt="discord"
+                    />
+                  </a>
+                  <a
+                    href="/"
+                    class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center"
+                  >
+                    <img src="./assets/images/svg/M.svg" alt="discord" />
+                  </a>
+                  <a
+                    href="/"
+                    class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center"
+                  >
+                    <img src="./assets/images/svg/Ship.svg" alt="discord" />
+                  </a>
+                </div>
+                <button
+                  class="py-3 px-4 box-border cursor-pointer font-semibold border-2 border-black bg-yellow text-black"
+                >
+                  Connect Wallet
+                </button>
+              </div>
+              <button
+                onclick="handelClick()"
+                class="sm:hidden relative z-50 overflow-hidden size-6 flex justify-between flex-col"
+              >
+                <span
+                  id="toggle-line-1"
+                  class="flex w-6 bg-black h-1 transition-all duration-300 rounded-md"
+                ></span>
+                <span
+                  id="toggle-line-2"
+                  class="flex w-6 bg-black h-1 transition-all duration-300 rounded-md relative after:absolute after:w-full after:rounded-md after:h-full after:left-0 after:top-0 after:bg-black after:transition-all after:duration-300"
+                ></span>
+                <span
+                  id="toggle-line-3"
+                  class="flex w-6 bg-black h-1 transition-all duration-300 rounded-md"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full mt-[7px] border-t-2 border-b-2 border-solid border-black"
+      >
+        <div class="max-w-[561px] justify-center items-center flex mx-auto">
+          <a
+            class="px-6 border-x-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+            href="#about"
+            >About us</a
+          >
+          <a
+            class="px-6 border-r-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+            href="#about"
+            >Minting</a
+          >
+          <a
+            class="px-6 border-r-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+            href="#about"
+            >Roadmap</a
+          >
+          <a
+            class="px-6 border-r-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+            href="#about"
+            >Team</a
+          >
+          <a
+            class="px-6 border-r-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+            href="#about"
+            >FAQs</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="flex items-center justify-center flex-col mb-[67px]">
+      <div class="container max-w-[1140px]">
+        <h1
+          class="xl:text-large md:text-8xl sm:text-5xl moderfb whitespace-nowrap text-center text-4xl text-black spacing-100"
+        >
+          THE HUSTLIN’ HARDOS.
+        </h1>
+      </div>
+      <div class="border-[2px] w-full"></div>
+      <img
+        class="w-100 max-h-[476px] object-cover"
+        src="./assets/images/png/header-img.png"
+        alt=""
+      />
+      <div class="border-[2px] w-full"></div>
+    </section>
+
+    <!-- section 3 -->
+    <section class="flex items-center justify-center flex-col">
+      <div class="container max-w-[1140px] mb-[64px] px-3">
+        <h2
+          class="xl:text-7xl md:text-6xl sm:text-4xl text-2xl leading-140 text-black"
+        >
+          “BREAKING NEWS: Hustlin Hardos set to launch the most anticipated NFT
+          project of 2022"
+        </h2>
+      </div>
+      <div class="border-[2px] w-full"></div>
+      <div class="container lg:border-l-[2px] max-w-[1140px] px-3">
+        <div class="flex flex-wrap flex-row -mx-3 items-center">
+          <div class="px-3 lg:w-2/4 mx-auto lg:my-0 my-5 flex justify-center">
+            <div>
+              <h4 class="text-base spacing-100 text-black mb-4">
+                March 1, 2022 by Editor Hardo
+              </h4>
+              <p class="text-lg spacing-150 text-black max-w-[475px] mb-4">
+                Hustlin' Hardos is a collection of 9,999 NFT characters on the
+                Ethereum Blockchain, inspired by the business/finance world,
+                hustler culture and web3 aesthetics. Each Hustlin' Hardo is a
+                completely original and unique combination of hundreds of
+                potential attributes such as luxury watches, clothing, or
+                accessories - all with provable degrees of rarity. The
+                collection features truly unique and powerful artwork, while
+                offering its holders first-of-its-kind utility. Your Huslin’
+                Hardo NFT is your gateway to The Boardroom, one of the most
+                rewarding and engaging online communities
+              </p>
+              <h5 class="spacing-100 text-base text-black underline">
+                Read More...
+              </h5>
+            </div>
+          </div>
+          <div class="lg:w-2/4 mx-auto">
+            <div class="flex">
+              <div class="sm:border-[2px]"></div>
+              <img
+                class="w-full"
+                src="./assets/images/png/man-img.png"
+                alt="man-img"
+              />
+              <div class="sm:border-[2px]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-[2px] w-full"></div>
+    </section>
+
+    <!-- Latest Tweets -->
+    <section>
+      <div
+        class="max-w-[1140px] max-xl:px-4 py-[89.5px] max-lg:py-20 max-md:py-14 max-sm:py-10 mx-auto container"
+      >
+        <div class="w-full flex items-center justify-between">
+          <h2
+            class="text-small max-lg:text-7xl max-md:text-6xl max-sm:text-4xl uppercase leading-104"
+          >
+            Latest Tweets
+          </h2>
+          <div class="gap-[55px] items-center max-sm:gap-5 flex justify-center">
+            <button class="cursor-pointer latest-prev rotate-180">
+              <img
+                class="max-sm:w-[17px] max-sm:h-[30px]"
+                src="./assets/images/svg/SliderArrow.svg"
+                alt="SliderArrow"
+              />
+            </button>
+            <button class="cursor-pointer latest-next">
+              <img
+                class="max-sm:w-[17px] max-sm:h-[30px]"
+                src="./assets/images/svg/SliderArrow.svg"
+                alt="SliderArrow"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="border-y-2 border-solid border-black">
+        <div class="max-w-[1140px] max-xl:px-4 mx-auto">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]"
+              >
+                <h4 class="font-semibold text-4xl leading-111">Etiam eget</h4>
+                <div class="flex gap-[11px] py-3 items-center">
+                  <img
+                    src="./assets/images/svg/BlueTwitter.svg"
+                    alt="twitter"
+                  />
+                  <p class="text-sm">23/02/2022</p>
+                </div>
+                <p class="max-sm:text-sm pb-[15px] leading-100">
+                  Diam tellus arcu, amet ornare nulla ut scelerisque et. Cum
+                  porta ultrices quam in.
+                </p>
+                <a href="/" class="hover:underline text-sm">Read More...</a>
+              </div>
+              <div
+                class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]"
+              >
+                <h4 class="font-semibold text-4xl leading-111">Venenatis.</h4>
+                <div class="flex gap-[11px] py-3 items-center">
+                  <img
+                    src="./assets/images/svg/BlueTwitter.svg"
+                    alt="twitter"
+                  />
+                  <p class="text-sm">22/02/2022</p>
+                </div>
+                <p class="max-sm:text-sm pb-[15px] leading-100">
+                  Tortor dolor ultrices mauris aliquam feugiat amet ultrices
+                  facilisi. Venenatis.
+                </p>
+                <a href="/" class="hover:underline text-sm">Read More...</a>
+              </div>
+              <div
+                class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]"
+              >
+                <h4 class="font-semibold text-4xl leading-111">
+                  Quis vulputate.
+                </h4>
+                <div class="flex gap-[11px] py-3 items-center">
+                  <img
+                    src="./assets/images/svg/BlueTwitter.svg"
+                    alt="twitter"
+                  />
+                  <p class="text-sm">20/02/2022</p>
+                </div>
+                <p class="max-sm:text-sm pb-[15px] leading-100">
+                  Vestibulum at gravida amet ullamcorper a ipsum laoreet tortor.
+                  Et tortor vel arcu ac.
+                </p>
+                <a href="/" class="hover:underline text-sm">Read More...</a>
+              </div>
+              <div
+                class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]"
+              >
+                <h4 class="font-semibold text-4xl leading-111">Venenatis.</h4>
+                <div class="flex gap-[11px] py-3 items-center">
+                  <img
+                    src="./assets/images/svg/BlueTwitter.svg"
+                    alt="twitter"
+                  />
+                  <p class="text-sm">22/02/2022</p>
+                </div>
+                <p class="max-sm:text-sm pb-[15px] leading-100">
+                  Tortor dolor ultrices mauris aliquam feugiat amet ultrices
+                  facilisi. Venenatis.
+                </p>
+                <a href="/" class="hover:underline text-sm">Read More...</a>
+              </div>
+              <div
+                class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]"
+              >
+                <h4 class="font-semibold text-4xl leading-111">
+                  Quis vulputate.
+                </h4>
+                <div class="flex gap-[11px] py-3 items-center">
+                  <img
+                    src="./assets/images/svg/BlueTwitter.svg"
+                    alt="twitter"
+                  />
+                  <p class="text-sm">20/02/2022</p>
+                </div>
+                <p class="max-sm:text-sm pb-[15px] leading-100">
+                  Vestibulum at gravida amet ullamcorper a ipsum laoreet tortor.
+                  Et tortor vel arcu ac.
+                </p>
+                <a href="/" class="hover:underline text-sm">Read More...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Minting -->
+    <section>
+      <div
+        class="max-w-[1140px] max-xl:px-4 py-[89.5px] max-lg:py-20 max-md:py-14 max-sm:py-10 mx-auto container"
+      >
+        <h2
+          class="text-small max-lg:text-7xl max-md:text-6xl max-sm:text-4xl uppercase leading-104"
+        >
+          Minting
+        </h2>
+      </div>
+      <div class="border-y-2 border-solid border-black">
+        <div
+          class="max-w-[1140px] max-xl:px-4 max-lg:border-none mx-auto border-x-2 border-solid border-black container"
+        >
+          <div
+            class="w-full flex justify-center max-lg:flex-col max-lg:py-5 max-lg:gap-3 items-center"
+          >
+            <div
+              class="max-w-[570px] max-lg:max-w-[unset] px-[25px] max-lg:px-0 w-full"
+            >
+              <div class="max-w-[438px] max-lg:max-w-[unset]">
+                <p>
+                  Most of the Hustlin’ Hardos first experienced NFTs via other
+                  successful projects like NBA TopShot, where revealing your
+                  newly minted item invoked the same emotions as opening up that
+                  first pack of baseball cards. NFTs have allowed us to enjoy
+                  those feelings once again while also empowering communities
+                  through shared ownership. The space has seen incredible growth
+                  over the past year, and it is our belief that we are in the
+                  very early innings of the paradigm shift that will be powered
+                  by web3.
+                </p>
+                <div
+                  class="min-h-[49px] border-2 mt-[15px] border-solid flex border-black max-w-[238px]"
+                >
+                  <button
+                    id="reduce-button"
+                    class="text-4xl reduce-button cursor-pointer max-md:text-3xl px-6 max-sm:text-2xl font-semibold"
+                  >
+                    -
+                  </button>
+                  <p
+                    id="output"
+                    class="min-w-[109px] border-x-2 border-solid border-black flex justify-center items-center text-4xl max-md:text-3xl px-6 max-sm:text-2xl font-semibold"
+                  >
+                    100
+                  </p>
+                  <button
+                    id="increase-button"
+                    class="text-4xl cursor-pointer max-md:text-3xl px-6 max-sm:text-2xl font-semibold"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <button
+                class="py-3 px-4 box-border my-[35.5px] cursor-pointer font-semibold border-2 border-black bg-yellow text-black"
+              >
+                Mint NOW
+              </button>
+              <p class="text-lg font-semibold leading-100 text-green">
+                Time Left
+              </p>
+              <p class="text-red text-4xl leading-100">40:15:12:10</p>
+            </div>
+            <img
+              src="./assets/images/png/man-img.png"
+              alt="man-img"
+              class="max-w-[570px] max-lg:border-none max-lg:max-w-[unset] max-lg:w-full border-l-2 border-solid border-black"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
