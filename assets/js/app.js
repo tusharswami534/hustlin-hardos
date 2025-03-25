@@ -52,3 +52,32 @@ incrementButton.addEventListener("click", () => {
   value += 1;
   valueDisplay.textContent = value;
 });
+
+// Team swiper
+var swiper = new Swiper(".team-mySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 0,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".team-next",
+    prevEl: ".team-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+  },
+});
