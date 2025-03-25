@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Primary Meta Tags -->
     <title>Hustlin Hardos</title>
     <meta name="title" content="Hustlin Hardos" />
-    <meta
-      name="description"
-      content="“BREAKING NEWS: Hustlin Hardos set to launch the most anticipated NFT project of 2022"
-    />
+    <meta name="description"
+        content="“BREAKING NEWS: Hustlin Hardos set to launch the most anticipated NFT project of 2022" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hustlin-five.vercel.app/" />
     <meta property="og:title" content="Hustlin Hardos" />
-    <meta
-      property="og:description"
-      content="“BREAKING NEWS: Hustlin Hardos set to launch the most anticipated NFT project of 2022"
-    />
+    <meta property="og:description"
+        content="“BREAKING NEWS: Hustlin Hardos set to launch the most anticipated NFT project of 2022" />
     <meta property="og:image" content="/meta-image.png" />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://hustlin-five.vercel.app/" />
     <meta property="twitter:title" content="Hustlin Hardos" />
-    <meta
-      property="twitter:description"
-      content="“BREAKING NEWS: Hustlin Hardos set to launch the most anticipated NFT project of 2022"
-    />
+    <meta property="twitter:description"
+        content="“BREAKING NEWS: Hustlin Hardos set to launch the most anticipated NFT project of 2022" />
     <meta property="twitter:image" content="/meta-image.png" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <style type="text/tailwindcss">
-      @theme {
+        @theme {
         --color-red: #ff0000;
         --color-yellow: #ffd600;
         --color-orange: #ff1300;
@@ -57,47 +54,145 @@
         --spacing-150: 150%;
       }
     </style>
-  </head>  
-    <!-- marquee -->
-    <!-- Header -->
-     <header class="py-2 px-4">
-        <div class="container max-w-[1140px] w-full mx-auto">
-            <div class="flex w-full justify-end items-center">
-                <div class="max-w-[658px] w-full">
-                    <div class="w-full flex items-center justify-between">
-                            <a href="/">Hustlin' Hardos</a>
-                            <div id="menu" class="flex gap-5 transition-all max-sm:z-40 duration-300 items-center max-sm:gap-4 max-sm:fixed max-sm:flex-col max-sm:w-full max-sm:h-full max-sm:justify-center max-sm:items-center max-sm:bg-white max-sm:top-0 max-sm:left-full">
-                                    <div class="flex gap-[18px] max-sm:flex-col max-sm:gap-4 items-center">
-                                        <a href="/" class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
-                                            <img src="./assets/images/svg/Discord.svg" alt="discord">
-                                        </a>
-                                        <a href="/" class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
-                                            <img src="./assets/images/svg/Twitter.svg" alt="discord">
-                                        </a>
-                                        <a href="/" class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
-                                            <img src="./assets/images/svg/Instagram.svg" alt="discord">
-                                        </a>
-                                        <a href="/" class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
-                                            <img src="./assets/images/svg/M.svg" alt="discord">
-                                        </a>
-                                        <a href="/" class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
-                                            <img src="./assets/images/svg/Ship.svg" alt="discord">
-                                        </a>
-                                    </div>
-                                    <button class="py-3 px-4 box-border cursor-pointer font-semibold border-2 border-black bg-yellow text-black">
-                                        Connect Wallet
-                                    </button>
-                            </div>
-                            <button onclick="handelClick()" class="sm:hidden relative z-50 overflow-hidden size-6 flex justify-between flex-col">
-                                <span id="toggle-line-1" class="flex w-6 bg-black h-1 transition-all duration-300 rounded-md"></span>
-                                <span id="toggle-line-2" class="flex w-6 bg-black h-1 transition-all duration-300 rounded-md relative after:absolute after:w-full after:rounded-md after:h-full after:left-0 after:top-0 after:bg-black after:transition-all after:duration-300"></span>
-                                <span id="toggle-line-3" class="flex w-6 bg-black h-1 transition-all duration-300 rounded-md"></span>
-                            </button>
+</head>
+<!-- marquee -->
+<!-- Header -->
+<header class="py-2 ">
+    <div class="container max-xl:px-4 max-w-[1140px] w-full mx-auto">
+        <div class="flex w-full justify-end items-center">
+            <div class="max-w-[658px] w-full">
+                <div class="w-full flex items-center justify-between">
+                    <a href="/">Hustlin' Hardos</a>
+                    <div id="menu"
+                        class="flex gap-5 transition-all max-sm:z-40 duration-300 items-center max-sm:gap-4 max-sm:fixed max-sm:flex-col max-sm:w-full max-sm:h-full max-sm:justify-center max-sm:items-center max-sm:bg-white max-sm:top-0 max-sm:left-full">
+                        <div class="flex gap-[18px] max-sm:flex-col max-sm:gap-4 items-center">
+                            <a href="/"
+                                class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
+                                <img src="./assets/images/svg/Discord.svg" alt="discord">
+                            </a>
+                            <a href="/"
+                                class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
+                                <img src="./assets/images/svg/Twitter.svg" alt="discord">
+                            </a>
+                            <a href="/"
+                                class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
+                                <img src="./assets/images/svg/Instagram.svg" alt="discord">
+                            </a>
+                            <a href="/"
+                                class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
+                                <img src="./assets/images/svg/M.svg" alt="discord">
+                            </a>
+                            <a href="/"
+                                class="flex size-6 grop justify-center hover:scale-105 transition-all duration-300 items-center">
+                                <img src="./assets/images/svg/Ship.svg" alt="discord">
+                            </a>
+                        </div>
+                        <button
+                            class="py-3 px-4 box-border cursor-pointer font-semibold border-2 border-black bg-yellow text-black">
+                            Connect Wallet
+                        </button>
                     </div>
+                    <button onclick="handelClick()"
+                        class="sm:hidden relative z-50 overflow-hidden size-6 flex justify-between flex-col">
+                        <span id="toggle-line-1"
+                            class="flex w-6 bg-black h-1 transition-all duration-300 rounded-md"></span>
+                        <span id="toggle-line-2"
+                            class="flex w-6 bg-black h-1 transition-all duration-300 rounded-md relative after:absolute after:w-full after:rounded-md after:h-full after:left-0 after:top-0 after:bg-black after:transition-all after:duration-300"></span>
+                        <span id="toggle-line-3"
+                            class="flex w-6 bg-black h-1 transition-all duration-300 rounded-md"></span>
+                    </button>
                 </div>
             </div>
         </div>
-     </header>
-     <script src="./assets/js/app.js"></script>
-  </body>
+    </div>
+    <div class="w-full mt-[7px] border-t-2 border-b-2 border-solid border-black">
+        <div class="max-w-[561px] justify-center items-center flex mx-auto">
+            <a class="px-6 border-x-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+                href="#about">About us</a>
+            <a class="px-6 border-r-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+                href="#about">Minting</a>
+            <a class="px-6 border-r-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+                href="#about">Roadmap</a>
+            <a class="px-6 border-r-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+                href="#about">Team</a>
+            <a class="px-6 border-r-2 whitespace-nowrap max-md:text-sm max-sm:text-xs border-solid py-[7px] max-sm:py-1 max-sm:px-2 border-black"
+                href="#about">FAQs</a>
+        </div>
+    </div>
+</header>
+<!-- Latest Tweets -->
+<section>
+    <div class="max-w-[1140px] max-xl:px-4 py-[89.5px] max-lg:py-20 max-md:py-14 max-sm:py-10 mx-auto container">
+        <div class="w-full flex items-center justify-between">
+            <h2 class="text-small max-lg:text-7xl max-md:text-6xl max-sm:text-4xl uppercase leading-104">Latest Tweets</h2>
+            <div class="gap-[55px] items-center max-sm:gap-5 flex justify-center">
+                <button class="cursor-pointer latest-prev rotate-180 ">
+                    <img class="max-sm:w-[17px] max-sm:h-[30px]" src="./assets/images/svg/SliderArrow.svg" alt="SliderArrow">
+                </button>
+                <button class="cursor-pointer latest-next">
+                    <img class="max-sm:w-[17px] max-sm:h-[30px]" src="./assets/images/svg/SliderArrow.svg" alt="SliderArrow">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="border-y-2 border-solid border-black">
+        <div class="max-w-[1140px] max-xl:px-4 mx-auto">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]">
+                            <h4 class="font-semibold text-4xl leading-111">Etiam eget</h4>
+                            <div class="flex gap-[11px] py-3 items-center">
+                                <img src="./assets/images/svg/BlueTwitter.svg" alt="twitter">
+                                <p class="text-sm ">23/02/2022</p>
+                            </div>
+                            <p class="max-sm:text-sm pb-[15px] leading-100">Diam tellus arcu, amet ornare nulla ut scelerisque et. Cum porta ultrices quam in.</p>
+                            <a href="/" class="hover:underline text-sm">Read More...</a>
+                    </div>
+                    <div class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]">
+                            <h4 class="font-semibold text-4xl leading-111">Venenatis.</h4>
+                            <div class="flex gap-[11px] py-3 items-center">
+                                <img src="./assets/images/svg/BlueTwitter.svg" alt="twitter">
+                                <p class="text-sm ">22/02/2022</p>
+                            </div>
+                            <p class="max-sm:text-sm pb-[15px] leading-100">Tortor dolor ultrices mauris aliquam feugiat amet ultrices facilisi. Venenatis.</p>
+                            <a href="/" class="hover:underline text-sm">Read More...</a>
+                    </div>
+                    <div class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]">
+                            <h4 class="font-semibold text-4xl leading-111">Quis vulputate.</h4>
+                            <div class="flex gap-[11px] py-3 items-center">
+                                <img src="./assets/images/svg/BlueTwitter.svg" alt="twitter">
+                                <p class="text-sm ">20/02/2022</p>
+                            </div>
+                            <p class="max-sm:text-sm pb-[15px] leading-100">Vestibulum at gravida amet ullamcorper a ipsum laoreet tortor. Et tortor vel arcu ac.</p>
+                            <a href="/" class="hover:underline text-sm">Read More...</a>
+                    </div>
+                    <div class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]">
+                            <h4 class="font-semibold text-4xl leading-111">Venenatis.</h4>
+                            <div class="flex gap-[11px] py-3 items-center">
+                                <img src="./assets/images/svg/BlueTwitter.svg" alt="twitter">
+                                <p class="text-sm ">22/02/2022</p>
+                            </div>
+                            <p class="max-sm:text-sm pb-[15px] leading-100">Tortor dolor ultrices mauris aliquam feugiat amet ultrices facilisi. Venenatis.</p>
+                            <a href="/" class="hover:underline text-sm">Read More...</a>
+                    </div>
+                    <div class="swiper-slide px-[26px] border-x border-solid border-black py-[47px]">
+                            <h4 class="font-semibold text-4xl leading-111">Quis vulputate.</h4>
+                            <div class="flex gap-[11px] py-3 items-center">
+                                <img src="./assets/images/svg/BlueTwitter.svg" alt="twitter">
+                                <p class="text-sm ">20/02/2022</p>
+                            </div>
+                            <p class="max-sm:text-sm pb-[15px] leading-100">Vestibulum at gravida amet ullamcorper a ipsum laoreet tortor. Et tortor vel arcu ac.</p>
+                            <a href="/" class="hover:underline text-sm">Read More...</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Minting -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./assets/js/app.js"></script>
+</body>
+
 </html>

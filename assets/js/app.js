@@ -7,3 +7,32 @@ const handelClick = () => {
   document.getElementById("menu").classList.toggle("max-sm:!left-0");
   document.getElementById("menu").classList.toggle("max-sm:!top-0");
 };
+
+// Swiper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 0,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".latest-next",
+    prevEl: ".latest-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+  },
+});
