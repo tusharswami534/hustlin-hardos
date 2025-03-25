@@ -1,20 +1,27 @@
-function toggleAccordion(clickedButton) {
-    const allContents = document.querySelectorAll(".accordion-content");
-    const allButtons = document.querySelectorAll(".accordion-header .arrow");
+function toggleAccordion(button) {
+    const allAccordions = document.querySelectorAll('.accordion-content');
+    const allIcons = document.querySelectorAll('.accordion-header .arrow');
+    const content = button.nextElementSibling;
+    const arrow = button.querySelector('.arrow');
 
-    allContents.forEach(content => {
-        if (content !== clickedButton.nextElementSibling) {
-            content.classList.add("hidden");
+    // Close all accordions and reset icons
+    allAccordions.forEach(acc => {
+        if (acc !== content) {
+            acc.classList.add('hidden');
         }
     });
 
-    allButtons.forEach(arrow => {
-        if (arrow !== clickedButton.querySelector(".arrow")) {
-            arrow.textContent;
-        }
+    allIcons.forEach(icon => {
+        icon.src = "./assets/images/svg/accordion-svg.svg"; // Reset to plus icon
     });
 
-    const content = clickedButton.nextElementSibling;
-    content.classList.toggle("hidden");
-    clickedButton.querySelector(".arrow").textContent = content.classList.contains("hidden");
+    // Toggle the clicked accordion
+    content.classList.toggle('hidden');
+
+    // Update icon based on state
+    if (content.classList.contains('hidden')) {
+        arrow.src = "./assets/images/svg/accordion-svg.svg"; // Plus icon
+    } else {
+        arrow.src = "./assets/images/svg/minus-accordion-svg.svg"; // Minus icon
+    }
 }
