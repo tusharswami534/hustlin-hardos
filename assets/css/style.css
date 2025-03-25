@@ -11,3 +11,9 @@
    font-family: "Noto Serif", serif;
    box-sizing: border-box;
 }
+
+body{
+    background-image: url('/assets/images/png/page-bg-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
