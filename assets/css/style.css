@@ -5,4 +5,20 @@
     --color-brown: #70675F;
     --color-green: #00A106;
     --color-gray: #A59A90;
-  }
+}
+
+@theme {
+    --text-large: 157px;
+    --text-medium: 140px;
+    --text-small: 80px;
+}
+
+/* Line Hight */
+
+@theme {
+    --spacing-100: 100%;
+    --spacing-104: 104%;
+    --spacing-111: 111%;
+    --spacing-140: 140%;
+    --spacing-150: 150%;
+}

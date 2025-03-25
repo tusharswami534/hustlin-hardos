@@ -27,13 +27,37 @@
     <meta property="twitter:image" content="/meta-image.png" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-red: #ff0000;
+            --color-yellow: #ffd600;
+            --color-orange: #ff1300;
+            --color-brown: #70675f;
+            --color-green: #00a106;
+            --color-gray: #a59a90;
+          }
+          @theme {
+            --text-large: 157px;
+            --text-medium: 140px;
+            --text-small: 80px;
+          }
+          /* Line Hight */
+          @theme {
+            --spacing-100: 100%;
+            --spacing-104: 104%;
+            --spacing-111: 111%;
+            --spacing-140: 140%;
+            --spacing-150: 150%;
+          }
+        </style>
 </head>
 
 <body>
-    <section class="flex ">
+    <section class="flex items-center justify-center flex-col">
         <div class="container max-w-[1140px]">
-            <h1 class="font-normal text-[157px] text-black leading-[100%]">THE HUSTLIN’ HARDOS.</h1>
+            <h1 class="text-large text-black leading-100">THE HUSTLIN’ HARDOS.</h1>
         </div>
+        <img class="w-100 max-h-[476px]" src="./assets/images/png/header-img.png" alt="">
     </section>
 </body>
 
