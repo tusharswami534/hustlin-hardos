@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: moderfb;
+    src: url(/assets/font/modernofbcomp-bold.otf);
+}
+.moderfb{
+    font-family: moderfb;
+}
 
 * {
    font-family: "Noto Serif", serif;

@@ -36,3 +36,19 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+const decrementButton = document.getElementById("reduce-button");
+const incrementButton = document.getElementById("increase-button");
+const valueDisplay = document.getElementById("output");
+
+let value = 100;
+
+decrementButton.addEventListener("click", () => {
+  value -= 1;
+  valueDisplay.textContent = value;
+});
+
+incrementButton.addEventListener("click", () => {
+  value += 1;
+  valueDisplay.textContent = value;
+});
