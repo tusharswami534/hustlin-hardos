@@ -1,24 +1,5 @@
-@theme {
-    --color-red: #FF0000;
-    --color-yellow: #FFD600;
-    --color-orange: #FF1300;
-    --color-brown: #70675F;
-    --color-green: #00A106;
-    --color-gray: #A59A90;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
-@theme {
-    --text-large: 157px;
-    --text-medium: 140px;
-    --text-small: 80px;
-}
-
-/* Line Hight */
-
-@theme {
-    --spacing-100: 100%;
-    --spacing-104: 104%;
-    --spacing-111: 111%;
-    --spacing-140: 140%;
-    --spacing-150: 150%;
+* {
+   font-family: "Noto Serif", serif;
 }
