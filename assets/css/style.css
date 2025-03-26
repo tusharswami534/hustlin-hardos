@@ -18,3 +18,21 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.slide-scroll {
+    animation: slide 20s linear infinite;
+}
+
+.slide-scroll:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
