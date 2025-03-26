@@ -85,31 +85,34 @@ var swiper = new Swiper(".team-mySwiper", {
 // year
 const currentYear = new Date().getFullYear();
 document.getElementById("year").textContent = currentYear;
-
+// Faq Section
 function toggleAccordion(button) {
-    const allAccordions = document.querySelectorAll('.accordion-content');
-    const allIcons = document.querySelectorAll('.accordion-header .arrow');
-    const content = button.nextElementSibling;
-    const arrow = button.querySelector('.arrow');
+  const allAccordions = document.querySelectorAll(".accordin-data");
+  const allIcons = document.querySelectorAll(
+    ".accordin-button span:last-child"
+  );
 
-    // Close all accordions and reset icons
-    allAccordions.forEach(acc => {
-        if (acc !== content) {
-            acc.classList.add('hidden');
-        }
-    });
+  const paragraph = button.nextElementSibling;
+  const icon = button.querySelector("span:last-child");
 
-    allIcons.forEach(icon => {
-        icon.src = "./assets/images/svg/accordion-svg.svg"; // Reset to plus icon
-    });
-
-    // Toggle the clicked accordion
-    content.classList.toggle('hidden');
-
-    // Update icon based on state
-    if (content.classList.contains('hidden')) {
-        arrow.src = "./assets/images/svg/accordion-svg.svg"; // Plus icon
-    } else {
-        arrow.src = "./assets/images/svg/minus-accordion-svg.svg"; // Minus icon
+  allAccordions.forEach((otherParagraph) => {
+    if (otherParagraph !== paragraph) {
+      otherParagraph.style.maxHeight = null;
     }
+  });
+
+  allIcons.forEach((otherIcon) => {
+    if (otherIcon !== icon) {
+      otherIcon.style.transform = "rotate(0deg)";
+    }
+  });
+
+  if (paragraph.style.maxHeight) {
+    paragraph.style.maxHeight = null;
+    icon.style.transform = "rotate(0deg)";
+  } else {
+    paragraph.style.maxHeight = paragraph.scrollHeight + "px";
+    icon.style.transform = "rotate(180deg)";
+  }
 }
+
