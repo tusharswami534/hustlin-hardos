@@ -85,3 +85,33 @@ var swiper = new Swiper(".team-mySwiper", {
 // year
 const currentYear = new Date().getFullYear();
 document.getElementById("year").textContent = currentYear;
+// Faq Section
+function toggleAccordion(button) {
+  const allAccordions = document.querySelectorAll(".accordin-data");
+  const allIcons = document.querySelectorAll(
+    ".accordin-button span:last-child"
+  );
+
+  const paragraph = button.nextElementSibling;
+  const icon = button.querySelector("span:last-child");
+
+  allAccordions.forEach((otherParagraph) => {
+    if (otherParagraph !== paragraph) {
+      otherParagraph.style.maxHeight = null;
+    }
+  });
+
+  allIcons.forEach((otherIcon) => {
+    if (otherIcon !== icon) {
+      otherIcon.style.transform = "rotate(0deg)";
+    }
+  });
+
+  if (paragraph.style.maxHeight) {
+    paragraph.style.maxHeight = null;
+    icon.style.transform = "rotate(0deg)";
+  } else {
+    paragraph.style.maxHeight = paragraph.scrollHeight + "px";
+    icon.style.transform = "rotate(180deg)";
+  }
+}
