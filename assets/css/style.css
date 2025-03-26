@@ -3,9 +3,6 @@
     font-family: moderfb;
     src: url(/assets/font/modernofbcomp-bold.otf);
 }
-.moderfb{
-    font-family: moderfb;
-}
 
 * {
    font-family: "Noto Serif", serif;
@@ -17,6 +14,10 @@ body{
     background-image: url('/assets/images/png/page-bg-image.png');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.moderfb{
+    font-family: moderfb;
 }
 
 .slide-scroll {
