@@ -8,7 +8,7 @@ const handelClick = () => {
   document.getElementById("menu").classList.toggle("max-sm:!top-0");
 };
 
-// Swiper
+// Latest Tweets Swiper
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 0,
