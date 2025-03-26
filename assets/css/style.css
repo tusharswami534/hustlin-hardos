@@ -36,3 +36,8 @@ body{
         transform: translateX(-50%);
     }
 }
+
+.swiper-slide-active {
+    border-left: 2px solid #000;    
+    border-right: 2px solid #000;
+}
