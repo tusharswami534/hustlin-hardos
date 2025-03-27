@@ -1,5 +1,6 @@
+// Header
 const handelClick = () => {
-  document.body.classList.toggle("overflow-hidden");
+  document.body.classList.toggle("max-sm:overflow-hidden");
   document.getElementById("toggle-line-1").classList.toggle("translate-x-10");
   document.getElementById("toggle-line-2").classList.toggle("rotate-45");
   document.getElementById("toggle-line-2").classList.toggle("after:rotate-90");
@@ -37,6 +38,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+// Counter
 const decrementButton = document.getElementById("reduce-button");
 const incrementButton = document.getElementById("increase-button");
 const valueDisplay = document.getElementById("output");
@@ -53,7 +55,7 @@ incrementButton.addEventListener("click", () => {
   valueDisplay.textContent = value;
 });
 
-// Team swiper
+// Team Swiper
 var swiper = new Swiper(".team-mySwiper", {
   slidesPerView: 2,
   spaceBetween: 0,
@@ -82,7 +84,7 @@ var swiper = new Swiper(".team-mySwiper", {
   },
 });
 
-// year
+// Year Function
 const currentYear = new Date().getFullYear();
 document.getElementById("year").textContent = currentYear;
 
@@ -116,7 +118,8 @@ function toggleAccordion(button) {
     icon.classList.remove("after:rotate-90");
   }
 }
-// Back to TOp
+
+// Back To Top
 let backToTopButton = document.getElementById("backToTop");
 window.onscroll = function () {
   if (
